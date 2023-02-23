@@ -1,0 +1,89 @@
+/* .LoadingTodo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    border-radius: 25px;
+}
+
+.LoadingTodo-text {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.LoadingTodo-compleIcon,
+.LoadingTodo-deleteIcon{
+    border-radius: 50px;
+    height: 48px;
+    width: 48px;
+}
+
+.LoadingTodo-compleIcon{
+    position: absolute;
+    left: 12px;
+}
+
+.LoadingTodo-deleteIcon{
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.LoadingTodo-container,
+.LoadingTodo-compleIcon,
+.LoadingTodo-deleteIcon{
+    background: linear-gradient(90deg, rgba(250,250,250,1),rgb(200,199,199));
+    background-size: 400% 400%;
+    animation: loadingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+} */
+
+
+
+.LoadingTodo-container {
+  background-color: rgba(250, 240, 245, 0.9);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.Loading-circle {
+  position: relative;
+  border-radius: 50%;
+  border: 15px solid transparent;
+  border-top-color: #fa79b3;
+  border-left-color: #fa79b3;
+  height: 100px;
+  width: 100px;
+  margin-left: calc(50% - 70px);
+  top: 40px;
+
+
+  animation: loadingAnimation 1s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

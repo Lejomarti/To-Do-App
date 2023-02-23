@@ -1,0 +1,23 @@
+.Icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+}
+
+.Icon-container--delete {
+  position: absolute;
+  right: 5px;
+}
+
+.Icon-svg{
+  width: 30px;
+  height: 30px;
+  transition: fill .15s;
+}
+
+.Icon-container:hover .Icon-svg--delete{
+  fill: red;
+}

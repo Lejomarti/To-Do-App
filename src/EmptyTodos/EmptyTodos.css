@@ -1,0 +1,11 @@
+.EmptyTodos-container{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+}
+
+.EmptyTodos-Imagen{
+    height: 100px;
+}
