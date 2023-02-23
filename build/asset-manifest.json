@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bf4ad18.css",
-    "main.js": "/static/js/main.6a77183f.js",
-    "static/media/sadFace.png": "/static/media/sadFace.7b2d7a97e13d861df165.png",
-    "index.html": "/index.html",
-    "static/media/icons8-eliminar-64.svg": "/static/media/icons8-eliminar-64.40fb65c14ede889f3d120c12bf37e55c.svg",
-    "main.6bf4ad18.css.map": "/static/css/main.6bf4ad18.css.map",
-    "main.6a77183f.js.map": "/static/js/main.6a77183f.js.map"
+    "main.css": "/To-Do-App/static/css/main.6bf4ad18.css",
+    "main.js": "/To-Do-App/static/js/main.85d001bc.js",
+    "static/media/sadFace.png": "/To-Do-App/static/media/sadFace.7b2d7a97e13d861df165.png",
+    "index.html": "/To-Do-App/index.html",
+    "static/media/icons8-eliminar-64.svg": "/To-Do-App/static/media/icons8-eliminar-64.40fb65c14ede889f3d120c12bf37e55c.svg",
+    "main.6bf4ad18.css.map": "/To-Do-App/static/css/main.6bf4ad18.css.map",
+    "main.85d001bc.js.map": "/To-Do-App/static/js/main.85d001bc.js.map"
   },
   "entrypoints": [
     "static/css/main.6bf4ad18.css",
-    "static/js/main.6a77183f.js"
+    "static/js/main.85d001bc.js"
   ]
 }
