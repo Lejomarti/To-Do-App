@@ -1,4 +1,6 @@
 import React from "react";
+import { TodoIcon } from "../TodoIcon";
+import { DeleteIcon } from "../TodoIcon/DeleteIcon";
 import "./TodoItem.css";
 
 function TodoItem(props) {
@@ -8,20 +10,21 @@ function TodoItem(props) {
 
   return (
     <li className="TodoItem">
-        <input
-          type="checkbox"
-          className={`Checkbox Icon-check ${
-            props.completed && "Icon-check--active"
-          }`}
-          defaultChecked={props.completed} //funciona mejor cuando el codigo es 'checked={props.completed}' pero consola me muestra un error. buscar como corregirlo sin el defaultChecked
-          onClick={props.onComplete}
-        />
+      <input
+        type="checkbox"
+        className={`Checkbox Icon-check ${
+          props.completed && "Icon-check--active"
+        }`}
+        defaultChecked={props.completed} //funciona mejor cuando el codigo es 'checked={props.completed}' pero consola me muestra un error. buscar como corregirlo sin el defaultChecked
+        onClick={props.onComplete}
+      />
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete" onClick={props.onDelete}>
-        X
-      </span>
+      <DeleteIcon onDelete={props.onDelete} />
+      {/* <span className="Icon Icon-delete" onClick={props.onDelete}>
+    X
+  </span> */}
     </li>
   );
 }

@@ -22,7 +22,7 @@ function useLocalStorage(itenName, initialValue) {
       } catch (error) {
         setError(error);
       }
-    }, 200);
+    }, 2000);
   });
 
   const saveItem = (newItem) => {
