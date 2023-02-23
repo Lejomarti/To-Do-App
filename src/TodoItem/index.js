@@ -1,5 +1,4 @@
 import React from "react";
-import { TodoIcon } from "../TodoIcon";
 import { DeleteIcon } from "../TodoIcon/DeleteIcon";
 import "./TodoItem.css";
 
