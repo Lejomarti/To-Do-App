@@ -1,12 +1,11 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const TodoContext = React.createContext();
-
-function TodoProvider(props) {
+function useTodos(props) {
   const {
     item: todos,
     saveItem: saveTodos,
+    sincronizeItem: sincronizeTodos,
     loading,
     error,
   } = useLocalStorage("TODOS_V1", []);
@@ -14,7 +13,7 @@ function TodoProvider(props) {
   const [searchValue, setSearchValue] = React.useState("");
 
   ///////////////cambiar/////////////
-  const [openModal, setOpenModal] = React.useState(false); 
+  const [openModal, setOpenModal] = React.useState(false);
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -56,28 +55,21 @@ function TodoProvider(props) {
     saveTodos(newTodos);
   };
   // Retornamos nuestro proveedor con nuestro contexto en la etiqueta value, que recibirá a toda nuestra aplicación, por eso necesitamos la prop children
-  return (
-    <TodoContext.Provider
-      value={{
-        loading,
-        error,
-        totalTodos,
-        completedTodos,
-        searchValue,
-        setSearchValue,
-        searchedTodos,
-        addTodo,
-        toggleCompleteTodo,
-        deleteTodo,
-        openModal,
-        setOpenModal,
-      }}
-    >
-      {props.children}
-    </TodoContext.Provider>
-  );
+  return {
+    loading,
+    error,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    addTodo,
+    toggleCompleteTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+    sincronizeTodos,
+  };
 }
 
-export { TodoContext, TodoProvider };
-
-<TodoContext.Consumer></TodoContext.Consumer>;
+export { useTodos };

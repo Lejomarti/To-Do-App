@@ -4,9 +4,9 @@ import App from "./App/index.js";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<App saludo="Buenas" nombre="Martin"/>);
+
 
 ReactDOM.createPortal(
     <App />, document.getElementById('modal')
 )
-
